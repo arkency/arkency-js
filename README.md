@@ -2,6 +2,10 @@
 
 Those are small utility functions we're using in a day-to-day manner during development of projects for our clients.
 
+## Usage
+
+All functions inside `lib/` are in the UMD format - you can use them in CommonJS environment by requiring it (`require("arkency-js/lib/Object.remapKeys")`) or you can just include them inside `<script>` tag - then they'll be available in the `window` namespace.
+
 ## Docs
 
 See `docs/` directory for docs.
