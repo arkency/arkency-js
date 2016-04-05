@@ -1,0 +1,25 @@
+{
+  "name": "arkency-js",
+  "version": "1.0.0",
+  "description": "Couple of utility functions useful during day-to-day work in Arkency.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arkency/arkency-js.git"
+  },
+  "keywords": [
+    "stdlib",
+    "javascript",
+    "utility",
+    "remap"
+  ],
+  "author": "Arkency (dev@arkency.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arkency/arkency-js/issues"
+  },
+  "homepage": "https://github.com/arkency/arkency-js#readme"
+}
