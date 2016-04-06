@@ -1,4 +1,4 @@
-import remapKeys from "./Object.remapKeys";
+import remapKeys from "./remapKeys";
 import test from "tape";
 
 test('#remapKeys takes object and mapping and returns remapped object', 

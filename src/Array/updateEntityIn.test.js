@@ -1,4 +1,4 @@
-import updateEntityIn from "./Array.updateEntityIn";
+import updateEntityIn from "./updateEntityIn";
 import test from "tape";
 
 const INPUT_COLLECTION = [

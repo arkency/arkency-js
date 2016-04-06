@@ -1,5 +1,5 @@
 import test from "tape";
-import partitionAll from "./Array.partitionAll";
+import partitionAll from "./partitionAll";
 
 const EXAMPLE_ARRAY = [1, 2, 3, 4, 5, 6];
 
