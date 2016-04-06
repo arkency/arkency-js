@@ -1,6 +1,6 @@
 # Arkency.js
 
-Those are small utility functions we're using in a day-to-day manner during development of projects for our clients.
+Those are small utility functions we're using in a day-to-day manner.
 
 ## Usage
 
