@@ -3,6 +3,7 @@ import test from "tape";
 
 test('#remapKeys takes object and mapping and returns remapped object', 
   function testRemapKeysSimple (assert) { 
+    assert.plan(1);
     const input = {
       foo: "bar",
       baz: "foo"
@@ -18,11 +19,12 @@ test('#remapKeys takes object and mapping and returns remapped object',
       second: "foo"
     };
 
-    assert.equal(remapKeys(input, mapping), expected);
+    assert.same(remapKeys(input, mapping), expected);
   });
 
 test('#remapKeys omits fields that are not mapped',
-  function testRemapKeysOmittingFieldsNotInMapping (assert) {  
+  function testRemapKeysOmittingFieldsNotInMapping (assert) { 
+    assert.plan(1); 
     const input = {
       foo: "bar",
       baz: "foo"
@@ -36,11 +38,12 @@ test('#remapKeys omits fields that are not mapped',
       first: "bar"
     };
 
-    assert.equal(remapKeys(input, mapping), expected);
+    assert.same(remapKeys(input, mapping), expected);
   });
 
 test('#remapKeys omits fields that are not in object but exist in mapping',
   function testRemapKeysOmittingFieldsNotInObject (assert) {
+    assert.plan(1);
     const input = {
       foo: "bar",
       baz: "foo"
@@ -57,11 +60,12 @@ test('#remapKeys omits fields that are not in object but exist in mapping',
       second: "foo"
     };
     
-    assert.equal(remapKeys(input, mapping), expected);
+    assert.same(remapKeys(input, mapping), expected);
   }); 
 
 test('#remapKeys throws if mapping is ambigous',
   function testRemapKeysThrowsIfMappingAmbigous (assert) {
+    assert.plan(1);
     const input = {
       foo: "bar",
       baz: "foo"

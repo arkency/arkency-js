@@ -1,4 +1,4 @@
-import updateEntityIn from "./updateEntityIn";
+import updateEntityIn from "./Array.updateEntityIn";
 import test from "tape";
 
 const INPUT_COLLECTION = [
@@ -14,6 +14,7 @@ const INPUT_COLLECTION = [
 
 test('#updateEntityIn takes id as function or value and returns collection with an updated entity',
  function testUpdateEntityInAcceptsBothFunctionAndValue (assert) {
+   assert.plan(2);
    const expectedWithFn = [
      INPUT_COLLECTION[0],
      { id: 2,
@@ -30,17 +31,18 @@ test('#updateEntityIn takes id as function or value and returns collection with 
    const marthaFn = ({name}) => name === "Martha";
    const bobID = 1;
 
-   assert.equals(updateEntityIn(marthaFn, 
+   assert.same(updateEntityIn(marthaFn, 
                                 { occupation: "World Leader" },
                                 INPUT_COLLECTION), expectedWithFn);
 
-   assert.equals(updateEntityIn(bobID,
+   assert.same(updateEntityIn(bobID,
                                 { occupation: "VP of Education" },
                                 INPUT_COLLECTION), expectedWithId);
  });
 
 test('#updateEntityIn throws if entity is not found with a given id',
   function testUpdateEntityThrowsIfEntityIsNotFound (assert) {
+    assert.plan(2);
     assert.throws(() => {
       updateEntityIn(3,
                      { something: 'irrelevant' },
